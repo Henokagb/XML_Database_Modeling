@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<database xmlns="http://www.good_food.com">
+	
+  <food>
+    <food_id>ID1</food_id>
+    <name>Farm stand chicken chef’s salad</name>
+    <overall_score>7</overall_score>
+	  
+    <ingredients>
+      <ingredient_name>2 boneless skinless chicken thighs, poached and shredded</ingredient_name>
+      <ingredient_name>2 tablespoons homemade mayonnaise</ingredient_name>
+      <ingredient_name>1 teaspoon chopped fresh oregano</ingredient_name>
+      <ingredient_name>1/4 teaspoon kosher salt</ingredient_name>
+      <ingredient_name>pinch of cracked black pepper</ingredient_name>
+      <ingredient_name>1 small garlic clove, minced</ingredient_name>
+      <ingredient_name>1 cup shredded mustard greens</ingredient_name>
+      <ingredient_name>1/2 cup shredded cabbage</ingredient_name>
+      <ingredient_name>1/2 cup julienned carrots</ingredient_name>
+      <ingredient_name>1/4 cup julienned Applegate Farm Provolone Cheese</ingredient_name>
+      <ingredient_name>1/4 cup julienned Applegate Farm Honey Ham</ingredient_name>
+      <ingredient_name>1 tablespoon olive oil</ingredient_name>
+      <ingredient_name>1 teaspoon apple cider vinegar</ingredient_name>
+      <ingredient_name>1/4 teaspoon organic sugar</ingredient_name>
+      <ingredient_name>1/8 teaspoon salt</ingredient_name>
+      <ingredient_name>lemon wedges (optional)</ingredient_name>
+    </ingredients>
+	  <tags>health</tags>
+    <description>Introducing the Farm Stand Chicken Chef's Salad – a vibrant and satisfying salad that combines the best of farm-fresh ingredients.
+	With tender grilled chicken, crisp greens, colorful vegetables, creamy avocado, tangy feta cheese, and a zesty lemon herb dressing, 
+	this salad is a burst of flavors that will leave you craving more. Get ready to indulge in a healthy and delicious culinary experience!</description>
+  </food>
+	
+	
+  <customers_orders>
+    <customer_email>custemail@gmail.com</customer_email>
+    <customer_phone>01 23 45 67 89</customer_phone>
+    <customer_fname>Albert</customer_fname>
+    <customer_lname>Smith</customer_lname>
+    <customer_adress>Adress1</customer_adress>
+    <order_date>2024-01-01T01:01:01+03:00</order_date>
+	  
+    <order number="1">
+      <food_id>ID1</food_id>
+    </order>
+	  
+    <order number="3">
+      <food_id>ID1</food_id>
+    </order>
+  </customers_orders>
+	
+  <reviews>
+    <customer_review>
+      <customer_email>email1@gmail.com</customer_email>
+      <comment>
+		  The Farm Stand Chicken Chef's Salad is a true delight for the taste buds. 
+	  The fresh, crunchy vegetables paired with tender grilled chicken and flavorful bacon create a harmonious blend of flavors and textures. 
+	  The portion size is generous, making it a satisfying and wholesome meal option. 
+	  The dressing is light and complements the ingredients perfectly. 
+	  Overall, this salad is a delicious and refreshing choice for a light yet filling meal. 
+	  Highly recommended for anyone looking for a tasty and nutritious salad option!
+	  </comment>
+      <given_score>10</given_score>
+    </customer_review>
+	  
+    <customer_review>
+      <customer_email>email1@gmail.com</customer_email>
+      <comment>A solid choice for those looking for a healthy and filling salad option</comment>
+      <given_score>7</given_score>
+    </customer_review>
+	  
+  </reviews>
+	
+</database>
