@@ -95,6 +95,7 @@ elementFormDefault="qualified">
     <xs:complexType>
         <xs:sequence>
             <xs:element name="customer_email" type="xs:string"/>
+            <xs:element name="reviewed_food_id" type="xs:IDREF"/>
             <xs:element name="comment" type="xs:string"/>
             <xs:element name="given_score">
                 <xs:simpleType>
