@@ -1,0 +1,135 @@
+<?xml version ="1.0" encoding ="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+targetNamespace="http://www.good_food.com"
+xmlns="http://www.good_food.com"
+elementFormDefault="qualified">
+
+<!-- FOOD PART -->
+
+<xs:element name="food">
+    <xs:complexType>
+        <xs:sequence>
+			
+            <xs:element name="name" type="xs:string"/>
+            
+            <!-- the following element represent the mean of all scores given by customers -->
+            <xs:element name="overall_score">
+                <xs:simpleType>
+                    <xs:restriction base="xs:decimal">
+                        <xs:minInclusive value="0"/>
+                        <xs:maxInclusive value="10"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+
+            <!--Here, we have the ingredients used for a food. There can be many ingredients but at least one-->
+            <xs:element name="ingredients">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="ingredient_name" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+
+            <!--The tag is like a category to which the food belong-->
+            <xs:element name="tags">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="gatsronomy"/>
+                        <xs:enumeration value="health"/>
+                        <xs:enumeration value="fast-food"/>
+						<xs:enumeration value="vegetarian"/>
+                        <xs:enumeration value="budget"/>
+                        <xs:enumeration value="exotic"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+
+            <xs:element name="description" type="xs:string"/>
+        </xs:sequence>
+		<xs:attribute name="food_id" type="xs:ID"/>
+    </xs:complexType>
+</xs:element>
+
+
+<!-- END OF THE MENU PART -->
+
+<!-- ORDERS PART -->
+
+<xs:element name="customers_orders">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element name="customer_email" type="xs:string"/>
+
+            <xs:element name="customer_phone">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:pattern value="0[1-9] \d{2} \d{2} \d{2} \d{2}"/> <!-- Example: 01 23 45 67 89 -->
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+
+            <xs:element name="customer_fname" type="xs:string"/>
+            <xs:element name="customer_lname" type="xs:string"/>
+            <xs:element name="customer_adress" type="xs:string"/>
+            <xs:element name="order_date" type="xs:dateTime"/>
+            
+            <!-- The order is composed of the id of the food ordered and for each food how many is ordered (in attribute)-->
+            <xs:element name="order" maxOccurs="unbounded">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="food_id" type="xs:IDREF"/>
+                    </xs:sequence>
+                    <xs:attribute name="number" type="xs:integer"/>
+                </xs:complexType>
+              </xs:element>
+              
+            <xs:element name="additional_precisions" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+
+<!-- END OF THE ORDER PART -->
+
+<!-- REVIEW PART -->
+<xs:element name="reviews">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element ref="customer_review" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="FoodID" type="xs:IDREF"/>
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="customer_review">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="customer_email" type="xs:string"/>
+			<xs:element name="comment" type="xs:string"/>
+			<xs:element name="given_score">
+				<xs:simpleType>
+					<xs:restriction base="xs:integer">
+						<xs:minInclusive value="0"/>
+						<xs:maxInclusive value="10"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+
+<!-- END OF THE REVIEW PART-->
+
+<!-- THE ROOT ELEMENT-->
+<xs:element name="database">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element ref="food"/>
+            <xs:element ref="customers_orders"/>
+            <xs:element ref="reviews"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+<!-- END-->
+
+</xs:schema>
