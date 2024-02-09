@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <database xmlns="http://www.good_food.com">
+<?xml-stylesheet type="text/xml" href="XSLFile1.xsl"?>
 	
-  <food>
-    <food_id>ID1</food_id>
+<!--List of food recipes with description separated by ID-->
+	
+  <food food_id="ID1">
     <name>Farm stand chicken chef’s salad</name>
     <overall_score>7</overall_score>
-	  
     <ingredients>
       <ingredient_name>2 boneless skinless chicken thighs, poached and shredded</ingredient_name>
       <ingredient_name>2 tablespoons homemade mayonnaise</ingredient_name>
@@ -29,26 +30,93 @@
 	With tender grilled chicken, crisp greens, colorful vegetables, creamy avocado, tangy feta cheese, and a zesty lemon herb dressing, 
 	this salad is a burst of flavors that will leave you craving more. Get ready to indulge in a healthy and delicious culinary experience!</description>
   </food>
+
+	<food food_id="ID2">
+		<name>Sweet potato and peanut curry</name>
+		<overall_score>8</overall_score>
+		<ingredients>
+			<ingredient_name>1 tbsp coconut oil</ingredient_name>
+			<ingredient_name>1 onion, chopped</ingredient_name>
+			<ingredient_name>2 garlic cloves, grated</ingredient_name>
+			<ingredient_name>thumb-sized piece ginger, grated</ingredient_name>
+			<ingredient_name>3 tbsp Thai red curry paste (check the label to make sure it’s vegetarian/ vegan)</ingredient_name>
+			<ingredient_name>1 tbsp smooth peanut butter</ingredient_name>
+			<ingredient_name>500g sweet potato, peeled and cut into chunks</ingredient_name>
+			<ingredient_name>400ml can coconut milk</ingredient_name>
+			<ingredient_name>200g bag spinach</ingredient_name>
+			<ingredient_name>1 lime, juiced</ingredient_name>
+			<ingredient_name>cooked rice, to serve (optional)</ingredient_name>
+			<ingredient_name>dry roasted peanuts, to serve (optional)</ingredient_name>
+		</ingredients>
+		<tags>vegetarian</tags>
+		<description>
+			I'm excited to share with you a delicious and aromatic recipe for Sweet Potato and Peanut Curry. 
+			This vibrant dish combines the natural sweetness of sweet potatoes with the nutty richness of peanuts, creating a truly delightful culinary experience. 
+			The creamy coconut milk adds a velvety texture, while the blend of aromatic spices elevates the flavors to new heights. 
+			Whether you're a fan of spicy dishes or simply looking to explore new tastes, this curry is bound to satisfy your cravings. 
+			So, let's dive into this mouthwatering recipe and get ready to indulge in a symphony of flavors!
+		</description>
+	</food>
+
+	<food food_id="ID3">
+		<name>Easy huevos rancheros</name>
+		<overall_score>10</overall_score>
+		<ingredients>
+			<ingredient_name>1 tbsp vegetable oil or sunflower oil</ingredient_name>
+			<ingredient_name>1 corn tortilla wrap</ingredient_name>
+			<ingredient_name>1 egg</ingredient_name>
+			<ingredient_name>200g can black beans, drained</ingredient_name>
+			<ingredient_name>juice 1/2 lime</ingredient_name>
+			<ingredient_name>1/2 ripe avocado, peeled and sliced</ingredient_name>
+			<ingredient_name>50g feta, crumbled</ingredient_name>
+			<ingredient_name>hot chilli sauce (we like sriracha)</ingredient_name>
+		</ingredients>
+		<tags>vegetarian</tags>
+		<description>
+			An easy Mexican breakfast that'll keep you going all morning, 
+			this huevos rancheros recipe (aka 'ranch eggs') is packed with vibrant colours and flavours.
+		</description>
+	</food>
 	
+<!--List of customer info and his orders-->
 	
-  <customers_orders>
-    <customer_email>custemail@gmail.com</customer_email>
-    <customer_phone>01 23 45 67 89</customer_phone>
-    <customer_fname>Albert</customer_fname>
-    <customer_lname>Smith</customer_lname>
-    <customer_adress>Adress1</customer_adress>
-    <order_date>2024-01-01T01:01:01+03:00</order_date>
+	<customers_orders>
+		<customer_email>custemail1@gmail.com</customer_email>
+		<customer_phone>01 23 45 67 89</customer_phone>
+		<customer_fname>Albert</customer_fname>
+		<customer_lname>Smith</customer_lname>
+		<customer_adress>Adress1</customer_adress>
+		<order_date>2024-01-01T01:01:01+03:00</order_date>
 	  
-    <order number="1">
-      <food_id>ID1</food_id>
-    </order>
+		<order number="1">
+		  <food_id>ID1</food_id>
+		</order>
 	  
-    <order number="3">
-      <food_id>ID1</food_id>
-    </order>
-  </customers_orders>
+		<order number="3">
+		  <food_id>ID3</food_id>
+		</order>
+	</customers_orders>
+
+	<customers_orders>
+		<customer_email>custemail2@gmail.com</customer_email>
+		<customer_phone>98 76 54 32 10</customer_phone>
+		<customer_fname>Rita</customer_fname>
+		<customer_lname>Ora</customer_lname>
+		<customer_adress>Adress2</customer_adress>
+		<order_date>2024-11-02T01:01:01+03:00</order_date>
+
+		<order number="1">
+			<food_id>ID2</food_id>
+		</order>
+
+		<order number="2">
+			<food_id>ID1</food_id>
+		</order>
+	</customers_orders>
 	
-  <reviews>
+<!--List of reviews separated by ID-->	
+
+  <reviews FoodID ="ID1">
     <customer_review>
       <customer_email>email1@gmail.com</customer_email>
       <comment>
@@ -63,11 +131,43 @@
     </customer_review>
 	  
     <customer_review>
-      <customer_email>email1@gmail.com</customer_email>
+      <customer_email>email2@gmail.com</customer_email>
       <comment>A solid choice for those looking for a healthy and filling salad option</comment>
       <given_score>7</given_score>
     </customer_review>
 	  
   </reviews>
+
+	<reviews FoodID ="ID2">
+		<customer_review>
+			<customer_email>email1@gmail.com</customer_email>
+			<comment>
+				Prepare to have your taste buds dazzled! 
+				The Sweet Potato and Peanut Curry is a culinary masterpiece that effortlessly blends sweet, savory, and spicy flavors in perfect harmony. 
+				The tender sweet potatoes provide a delightful sweetness that pairs beautifully with the nutty richness of the peanuts. 
+				The aromatic blend of spices adds depth and complexity to the dish, while the creamy coconut milk creates a luscious and velvety texture. 
+				Every bite is a burst of flavors that will keep you coming back for more. 
+				Whether you're a fan of curries or looking for a vegetarian-friendly option, this dish is a winner. 
+				It's a true crowd-pleaser that will leave you craving seconds and sharing the recipe with everyone you know. 
+				Don't miss out on this delightful culinary adventure!
+			</comment>
+			<given_score>6</given_score>
+		</customer_review>
+	</reviews>
+
+	<reviews FoodID ="ID3">
+		<customer_review>
+			<customer_email>email2@gmail.com</customer_email>
+			<comment>
+				Say hello to breakfast perfection! 
+				The Easy Huevos Rancheros recipe is a quick and simple way to start your day with a burst of Mexican flavors. 
+				This dish combines perfectly fried eggs with a zesty tomato-based salsa, all served on a crispy tortilla. 
+				It's a deliciously satisfying breakfast that will leave you energized and ready to conquer the day. 
+				With minimal effort and maximum flavor, this recipe is a must-try for anyone looking to spice up their morning routine. 
+				Get ready to savor every bite of this mouthwatering breakfast delight!
+			</comment>
+			<given_score>10</given_score>
+		</customer_review>
+	</reviews>
 	
 </database>
