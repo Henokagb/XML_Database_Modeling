@@ -21,12 +21,13 @@ Structure
     Moreover, nearby are the transformed files that were created by transforming the XMLDatabase.xml file through different xsl files. The xsl file number matches the number of the converted html file (for example, output1.html is the XMLDatabase.xml transformation with XSLFile1.xsl and etc.)
 
 *SCENARIOS DESCRIPTION
-scenario1.xsl describes the main page of the recipe box company. This page will show all the recipes offered by the company and their overal score.
 
-scenario2.xsl describes a separate page where the selected recipe will be shown with its detailed description, number of orders and reviews.
+    scenario1.xsl describes the main page of the recipe box company. This page will show all the recipes offered by the company and their overal score.
 
-scenario3.xsl involves showing a list of all orders placed by customers.
+    scenario2.xsl describes a separate page where the selected recipe will be shown with its detailed description, number of orders and reviews.
 
-scenario4.xls describes a list of food reviews with the corresponding customer information.
+    scenario3.xsl involves showing a list of all orders placed by customers.
 
-scenario5.py describe the list all the customers along with their details.
+    scenario4.xls describes a list of food reviews with the corresponding customer information.
+
+    scenario5.py describe the list all the customers along with their details.
