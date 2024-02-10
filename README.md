@@ -15,6 +15,7 @@ Structure
     -The XMLDatabase.xml file contains a database based on the xsd file. It contains examples of filling recipes, customers and reviews.
 
 *TRANSFORMATION PART
+
     -The files with the extension .xsl, .py contain different scenarios requiring the visualization of part of this data. The names of these files - scenario.xsl / scenario.py
 
     Moreover, nearby are the transformed files that were created by transforming the XMLDatabase.xml file through different xsl files. The xsl file number matches the number of the converted html file (for example, output1.html is the XMLDatabase.xml transformation with XSLFile1.xsl and etc.)
