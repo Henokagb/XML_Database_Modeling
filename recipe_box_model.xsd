@@ -9,7 +9,7 @@ elementFormDefault="qualified">
 <xs:element name="food">
     <xs:complexType>
         <xs:sequence>
-            <xs:element name="food_id" type="xs:ID"/>
+			
             <xs:element name="name" type="xs:string"/>
             
             <!-- the following element represent the mean of all scores given by customers -->
@@ -38,6 +38,7 @@ elementFormDefault="qualified">
                         <xs:enumeration value="gatsronomy"/>
                         <xs:enumeration value="health"/>
                         <xs:enumeration value="fast-food"/>
+						<xs:enumeration value="vegetarian"/>
                         <xs:enumeration value="budget"/>
                         <xs:enumeration value="exotic"/>
                     </xs:restriction>
@@ -46,6 +47,7 @@ elementFormDefault="qualified">
 
             <xs:element name="description" type="xs:string"/>
         </xs:sequence>
+		<xs:attribute name="food_id" type="xs:ID"/>
     </xs:complexType>
 </xs:element>
 
@@ -90,32 +92,32 @@ elementFormDefault="qualified">
 <!-- END OF THE ORDER PART -->
 
 <!-- REVIEW PART -->
+<xs:element name="reviews">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element ref="customer_review" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="FoodID" type="xs:IDREF"/>
+	</xs:complexType>
+</xs:element>
 
 <xs:element name="customer_review">
-    <xs:complexType>
-        <xs:sequence>
-            <xs:element name="customer_email" type="xs:string"/>
-            <xs:element name="reviewed_food_id" type="xs:IDREF"/>
-            <xs:element name="comment" type="xs:string"/>
-            <xs:element name="given_score">
-                <xs:simpleType>
-                    <xs:restriction base="xs:integer">
-                        <xs:minInclusive value="0"/>
-                        <xs:maxInclusive value="10"/>
-                    </xs:restriction>
-                </xs:simpleType>
-            </xs:element>
-        </xs:sequence>
-    </xs:complexType>
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="customer_email" type="xs:string"/>
+			<xs:element name="comment" type="xs:string"/>
+			<xs:element name="given_score">
+				<xs:simpleType>
+					<xs:restriction base="xs:integer">
+						<xs:minInclusive value="0"/>
+						<xs:maxInclusive value="10"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
 </xs:element>
 
-<xs:element name="reviews">
-    <xs:complexType>
-        <xs:sequence>
-            <xs:element ref="customer_review" minOccurs="0" maxOccurs="unbounded"/>
-        </xs:sequence>
-    </xs:complexType>
-</xs:element>
 <!-- END OF THE REVIEW PART-->
 
 <!-- THE ROOT ELEMENT-->
