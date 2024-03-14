@@ -20,6 +20,14 @@ Structure
 
     Moreover, nearby are the transformed files that were created by transforming the XMLDatabase.xml file through different xsl files. The xsl file number matches the number of the converted html file (for example, output1.html is the XMLDatabase.xml transformation with XSLFile1.xsl and etc.)
 
+*COMMAND
+
+    To get the output of an xls file, you can use the command xlstproc like this:
+    
+    xsltproc [xsl transformation file] [xml database file] > o[output file]
+    
+    example: xsltproc scenario5.xsl XMLDatabase.xml > output6.html
+
 *SCENARIOS DESCRIPTION
 
     scenario1.xsl describes the main page of the recipe box company. This page will show all the recipes offered by the company and their overal score.
@@ -32,4 +40,7 @@ Structure
 
     scenario5.py describe the list all the customers along with their details.
 
+    
+
     scenario7.xml generates a top rated recipes list with reviews
+
