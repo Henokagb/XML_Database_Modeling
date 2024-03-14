@@ -24,7 +24,7 @@ Structure
 
     To get the output of an xls file, you can use the command xlstproc like this:
     
-    xsltproc [xsl transformation file] [xml database file] > o[output file]
+    xsltproc [xsl transformation file] [xml database file] > [output file]
     
     example: xsltproc scenario5.xsl XMLDatabase.xml > output6.html
 
