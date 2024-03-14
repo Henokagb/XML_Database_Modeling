@@ -7,7 +7,7 @@
   <food food_id="ID1">
     <name>Farm stand chicken chef’s salad</name>
     <overall_score>7</overall_score>
-    <ingredients>
+    <ingredients>tre
       <ingredient_name>2 boneless skinless chicken thighs, poached and shredded</ingredient_name>
       <ingredient_name>2 tablespoons homemade mayonnaise</ingredient_name>
       <ingredient_name>1 teaspoon chopped fresh oregano</ingredient_name>
@@ -127,7 +127,7 @@
 	  Overall, this salad is a delicious and refreshing choice for a light yet filling meal. 
 	  Highly recommended for anyone looking for a tasty and nutritious salad option!
 	  </comment>
-      <given_score>10</given_score>
+      <given_score>7</given_score>
     </customer_review>
 	  
     <customer_review>
@@ -151,7 +151,7 @@
 				It's a true crowd-pleaser that will leave you craving seconds and sharing the recipe with everyone you know. 
 				Don't miss out on this delightful culinary adventure!
 			</comment>
-			<given_score>6</given_score>
+			<given_score>8</given_score>
 		</customer_review>
 	</reviews>
 

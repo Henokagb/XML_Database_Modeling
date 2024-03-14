@@ -31,3 +31,5 @@ Structure
     scenario4.xls describes a list of food reviews with the corresponding customer information.
 
     scenario5.py describe the list all the customers along with their details.
+
+    scenario7.xml generates a top rated recipes list with reviews
