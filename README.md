@@ -40,7 +40,7 @@ Structure
 
     scenario5.py describe the list all the customers along with their details.
 
-    
+    sceanrio6.xsl describes RSS Feed Generation fo New Recipe Updates.
 
     scenario7.xml generates a top rated recipes list with reviews
 
