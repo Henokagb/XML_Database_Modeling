@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<rss xmlns:gf="http://www.good_food.com" version="2.0"><channel><title>Good Food Recipes</title><link>http://www.goodfood.com/recipes</link><description>Latest recipes from Good Food</description><language>en-us</language><item><title>Farm stand chicken chef’s salad</title><link>http://www.goodfood.com/recipes/{@food_id}</link><description>Introducing the Farm Stand Chicken Chef's Salad – a vibrant and satisfying salad that combines the best of farm-fresh ingredients.
+	With tender grilled chicken, crisp greens, colorful vegetables, creamy avocado, tangy feta cheese, and a zesty lemon herb dressing, 
+	this salad is a burst of flavors that will leave you craving more. Get ready to indulge in a healthy and delicious culinary experience!</description><guid isPermaLink="false">ID1</guid></item><item><title>Sweet potato and peanut curry</title><link>http://www.goodfood.com/recipes/{@food_id}</link><description>
+			I'm excited to share with you a delicious and aromatic recipe for Sweet Potato and Peanut Curry. 
+			This vibrant dish combines the natural sweetness of sweet potatoes with the nutty richness of peanuts, creating a truly delightful culinary experience. 
+			The creamy coconut milk adds a velvety texture, while the blend of aromatic spices elevates the flavors to new heights. 
+			Whether you're a fan of spicy dishes or simply looking to explore new tastes, this curry is bound to satisfy your cravings. 
+			So, let's dive into this mouthwatering recipe and get ready to indulge in a symphony of flavors!
+		</description><guid isPermaLink="false">ID2</guid></item><item><title>Easy huevos rancheros</title><link>http://www.goodfood.com/recipes/{@food_id}</link><description>
+			An easy Mexican breakfast that'll keep you going all morning, 
+			this huevos rancheros recipe (aka 'ranch eggs') is packed with vibrant colours and flavours.
+		</description><guid isPermaLink="false">ID3</guid></item></channel></rss>
