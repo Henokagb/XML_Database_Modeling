@@ -1,6 +1,6 @@
 # XML_Database_Modeling
 
-COllaborators: [@Aymen-Dhaouadi](https://github.com/Aymen-Dhaouadi), [@Danilya69](https://github.com/Danilya69)
+Collaborators: [@Aymen-Dhaouadi](https://github.com/Aymen-Dhaouadi), [@Danilya69](https://github.com/Danilya69)
 
 Project:
 -------
